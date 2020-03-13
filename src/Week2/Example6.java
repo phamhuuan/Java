@@ -8,130 +8,193 @@ public class Example6 {
 		System.out.println("1. Show library information");
 		System.out.println("2. Add new book");
 		System.out.println("3. Find book");
-		System.out.println("4. Exit");
+		System.out.println("4. Edit book");
+		System.out.println("5. Delete book");
+		System.out.println("6. Exit");
 		System.out.print("Enter menu ID: ");
 	}
 	public static void main(String[] args) {
 		int x;
 		String data[] = {
-						"The Midnight Line",
-						"The Rooster Bar",
-						"Two Kinds of Truth",
-						"Origin",
-						"Artemis",
-						"Hardcore Twenty-four",
-						"Glass Houses",
-						"Little Fires Everywhere",
-						"The Wendy Project",
-						"End Game",
-						"Orphan Island",
-						"What Happened",
-						"Manhattan Beach",
-						"Deep Freeze",
-						"Turtles All the Way Down",
-						"Y Is for Yesterday",
 						"A Column of Fire",
-						"The Ship of the Dead",
-						"Before We Were Yours",
-						"The Cuban Affair",
-						"Uncommon Type",
-						"Braving the Wilderness",
-						"You Don't Have to Say You Love Me",
-						"To Be Where You Are",
-						"Proof of Life",
-						"Killers of the Flower Moon",
-						"Leonardo Da Vinci",
-						"Spinning",
-						"The Girl Who Takes An Eye for An Eye",
-						"Magpie Murders",
-						"Year One",
-						"Don't Let Go",
-						"The People Vs. Alex Cross",
-						"Unbelievable",
-						"We Were Eight Years in Power",
-						"Camino Island",
-						"Thorhill",
-						"My Absolute Darling",
-						"Killing England",
-						"In the Midst of Winter",
-						"Future Home of the Living God",
-						"Diary of A Wimpy Kid",
-						"Love and Other Consolation Prizes",
-						"Enemy of the State",
-						"La Belle Sauvage",
-						"Sing, Unburied, Sing",
-						"The Story of Arthur Truluv",
 						"A Face Like Glass",
-						"The Lying Game",
-						"The Rules of Magic",
-						"George & Lizzie",
-						"Grant",
-						"Haunted",
-						"Al Franken, Giant of the Senate",
-						"In This Moment",
 						"A Legacy of Spies",
-						"Sleeping Beauties",
-						"Merry and Bright",
-						"The ninth Hour",
-						"Where the Past Begins",
-						"Bobby Kennedy",
-						"The Dark Prophecy",
-						"The War I Finally Won",
+						"Al Franken, Giant of the Senate",
+						"Artemis",
+						"Before We Were Yours",
 						"Beneath A Scarlet Sky",
-						"Fantasyland",
-						"Into the Water",
-						"The House of Unexpected Sisters",
-						"Sourdough",
-						"Nomadland",
-						"Why Buddhism Is True",
-						"Sisters First",
-						"The Alice Network",
-						"Smitten Kitchen Every Day",
-						"Endurance",
+						"Bobby Kennedy",
 						"Bonfire",
-						"The Romanov Ransom",
-						"Obama",
-						"Fairytale",
-						"How to Instant Pot",
-						"The Child Finder",
-						"Less",
-						"Gwendy's Button Box",
-						"Dinner in An Instant",
-						"Promise Me Dad",
-						"The Power",
-						"Mighty Jack",
-						"Past Perfect",
-						"Righteous",
+						"Braving the Wilderness",
+						"Camino Island",
 						"Caroline",
-						"The Dangerous Case of Donald Trump",
-						"The Library at the Edge of the World",
-						"Same Kind of Different as Me",
-						"The Store",
-						"Quick & Dirty",
-						"Secrets in Death",
-						"Medical Medium Thyroid Healing",
-						"The Plant Paradox",
 						"Count to Ten",
+						"Deep Freeze",
+						"Diary of A Wimpy Kid",
+						"Dinner in An Instant",
+						"Don't Let Go",
+						"End Game",
+						"Endurance",
+						"Enemy of the State",
+						"Fairytale",
+						"Fantasyland",
+						"Future Home of the Living God",
+						"George & Lizzie",
+						"Glass Houses",
+						"Grant",
+						"Gwendy's Button Box",
+						"Hardcore Twenty-four",
+						"Haunted",
+						"How to Instant Pot",
+						"In This Moment",
+						"In the Midst of Winter",
+						"Into the Water",
+						"Killers of the Flower Moon",
+						"Killing England",
+						"Killing Season",
+						"La Belle Sauvage",
+						"Leonardo Da Vinci",
+						"Less",
+						"Little Fires Everywhere",
+						"Love and Other Consolation Prizes",
+						"Magpie Murders",
+						"Manhattan Beach",
+						"Medical Medium Thyroid Healing",
+						"Merry and Bright",
+						"Mighty Jack",
+						"My Absolute Darling",
+						"Nomadland",
+						"Obama",
+						"Origin",
+						"Orphan Island",
+						"Past Perfect",
+						"Promise Me Dad",
+						"Proof of Life",
+						"Quick & Dirty",
+						"Righteous",
+						"Same Kind of Different as Me",
+						"Secrets in Death",
 						"Seeing Red",
-						"Killing Season"
+						"Sing, Unburied, Sing",
+						"Sisters First",
+						"Sleeping Beauties",
+						"Smitten Kitchen Every Day",
+						"Sourdough",
+						"Spinning",
+						"The Alice Network",
+						"The Child Finder",
+						"The Cuban Affair",
+						"The Dangerous Case of Donald Trump",
+						"The Dark Prophecy",
+						"The Girl Who Takes An Eye for An Eye",
+						"The House of Unexpected Sisters",
+						"The Library at the Edge of the World",
+						"The Lying Game",
+						"The Midnight Line",
+						"The People Vs. Alex Cross",
+						"The Plant Paradox",
+						"The Power",
+						"The Romanov Ransom",
+						"The Rooster Bar",
+						"The Rules of Magic",
+						"The Ship of the Dead",
+						"The Store",
+						"The Story of Arthur Truluv",
+						"The War I Finally Won",
+						"The Wendy Project",
+						"The ninth Hour",
+						"Thorhill",
+						"To Be Where You Are",
+						"Turtles All the Way Down",
+						"Two Kinds of Truth",
+						"Unbelievable",
+						"Uncommon Type",
+						"We Were Eight Years in Power",
+						"What Happened",
+						"Where the Past Begins",
+						"Why Buddhism Is True",
+						"Y Is for Yesterday",
+						"Year One",
+						"You Don't Have to Say You Love Me"
 		};
 		Collection<String> bookCollection = new ArrayList<>(Arrays.asList(data));
 		Stack<String> bookStack = new Stack<String>();
 		bookStack.addAll(bookCollection);
-		System.out.println(bookStack);
 		do {
 			printMenu();
 			Scanner scanner = new Scanner(System.in);
+			String name;
+			String newName;
 			x = scanner.nextInt();
+			Scanner scannerName;
 			switch (x) {
 				case 1:
 					int tmp = 1;
-					for (String datum : data) {
-						System.out.println(tmp++ + ' ' + datum);
+					for (String datum : bookStack) {
+						System.out.println(tmp++ + " "  + datum);
 					}
+					break;
 				case 2:
-
+					System.out.print("Enter book's name: ");
+					Scanner scannerNewName = new Scanner(System.in);
+					newName = scannerNewName.nextLine();
+					for (int i = 0; i < bookStack.size(); i++) {
+						if (newName.compareTo(bookStack.get(i)) < 0) {
+							bookStack.add(i, newName);
+							break;
+						}
+					}
+					break;
+				case 3:
+					System.out.print("Enter book's name: ");
+					scannerName = new Scanner(System.in);
+					name = scannerName.nextLine();
+					for (String s : bookStack) {
+						if (s.indexOf(name) == 0) {
+							System.out.println(s);
+						}
+					}
+					break;
+				case 4:
+					System.out.print("Enter book's name: ");
+					scannerName = new Scanner(System.in);
+					name = scannerName.nextLine();
+					if (bookStack.search(name) != -1) {
+						System.out.print("Enter book's name: ");
+						scannerName = new Scanner(System.in);
+						newName = scannerName.nextLine();
+						bookStack.remove(bookStack.indexOf(name));
+						for (int i = 0; i < bookStack.size(); i++) {
+							if (newName.compareTo(bookStack.get(i)) < 0) {
+								bookStack.add(i, newName);
+								break;
+							}
+						}
+						break;
+					}
+					for (String s : bookStack) {
+						if (s.indexOf(name) == 0) {
+							if (s.indexOf(name) == 0) {
+								System.out.println(s);
+							}
+						}
+					}
+					break;
+				case 5:
+					System.out.print("Enter book's name: ");
+					scannerName = new Scanner(System.in);
+					name = scannerName.nextLine();
+					if (bookStack.search(name) != -1) {
+						bookStack.remove(bookStack.indexOf(name));
+						break;
+					}
+					for (String s : bookStack) {
+						if (s.indexOf(name) == 0) {
+							System.out.println(s);
+						}
+					}
+					break;
 			}
-		} while (x != 4);
+		} while (x != 6);
 	}
 }
