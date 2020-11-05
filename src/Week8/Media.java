@@ -1,4 +1,4 @@
-package Week7;
+package Week8;
 
 public abstract class Media {
 	private String title, category, id, type;

@@ -1,10 +1,11 @@
-package Week7;
+package Week8;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Order {
 
-	private final ArrayList<Media> itemsOrdered = new ArrayList<>();
+	private final List<Media> itemsOrdered = new ArrayList<>();
 
 	public Order() {
 	}

@@ -1,4 +1,4 @@
-package Week7;
+package Week8;
 
 public class Discs extends Media {
 	private String director;

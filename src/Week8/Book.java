@@ -1,11 +1,21 @@
-package Week7;
+package Week8;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
-public class Book extends Media {
-	private ArrayList<String> authors = new ArrayList<String>();
+public class Book extends Media implements Comparable {
+	private ArrayList<String> authors = new ArrayList<>();
+	private String content;
+	private List<String> contentTokens;
+	private Map<String, Integer> wordFrequency;
+
 	public Book() {
 
+	}
+
+	public void processContent() {
+		content.split(" ");
 	}
 
 	public void getDetail() {
@@ -29,5 +39,10 @@ public class Book extends Media {
 
 	public ArrayList<String> getAuthors() {
 		return authors;
+	}
+
+	@Override
+	public int compareTo(Object object) {
+		return this.getTitle().compareTo(((Book)object).getTitle());
 	}
 }

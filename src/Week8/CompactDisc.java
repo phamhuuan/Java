@@ -1,9 +1,10 @@
-package Week7;
+package Week8;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class CompactDisc extends Discs {
-  private ArrayList<Track> tracks = new ArrayList<>();
+public class CompactDisc extends Discs implements Comparable {
+  private List<Track> tracks = new ArrayList<>();
   private String artist;
 
 	public CompactDisc() {
@@ -23,7 +24,7 @@ public class CompactDisc extends Discs {
 
 	}
 
-  public ArrayList<Track> getTracks() {
+  public List<Track> getTracks() {
     return tracks;
   }
 
@@ -56,4 +57,10 @@ public class CompactDisc extends Discs {
     }
 	  return total;
   }
+
+	@Override
+	public int compareTo(Object object) {
+		int returnNumber = this.getTitle().compareTo(((CompactDisc)object).getTitle());
+		return returnNumber != 0 ? returnNumber : Integer.compare(this.getLength(), ((CompactDisc)object).getLength());
+	}
 }
